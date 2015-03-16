@@ -48,11 +48,9 @@ ActiveRecord::Schema.define(version: 20150314185045) do
   add_index "bookings", ["timeslot_id"], name: "index_bookings_on_timeslot_id"
 
   create_table "timeslots", force: true do |t|
-    t.integer  "start_time",     limit: 8, default: 0, null: false
-    t.integer  "duration",                 default: 0
-    t.integer  "availability",             default: 0
-    t.integer  "customer_count",           default: 0
-    t.integer  "lock_version",             default: 0
+    t.integer  "start_time",   limit: 8, default: 0, null: false
+    t.integer  "duration",               default: 0
+    t.integer  "lock_version",           default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end

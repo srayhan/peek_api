@@ -30,7 +30,7 @@ class Timeslot < ActiveRecord::Base
       self.transaction do
          if boat = first_available_boat(party_size)
             booking = Booking.create(timeslot_id: self.id, boat_id: boat.id, size: party_size) 
-            update({availability: max_availability, customer_count: (customer_count+party_size)})
+            touch #update timestamp & lock_version
             booking
          end
       end
