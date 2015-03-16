@@ -1,0 +1,1 @@
+json.partial! partial: 'timeslots/timeslot', locals: { timeslot: @timeslot}

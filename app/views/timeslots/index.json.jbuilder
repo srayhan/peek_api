@@ -1,0 +1,1 @@
+json.partial! partial: 'timeslots/timeslot', collection: @timeslots, as: :timeslot
